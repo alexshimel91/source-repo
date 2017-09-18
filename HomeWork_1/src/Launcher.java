@@ -4,10 +4,25 @@ public class Launcher {
 
     public static void main(String[] args) {
         System.out.println(init);
+        Employee employee = new Employee();
         Customer customer = new Customer();
-        System.out.println(customer.resume("Shaven", 69, "shaurmen"));
-        customer.complain(true);
-        customer.earn(12,6);
-        customer.pahat();
+
+        employee.name="Shaven";
+        employee.age=66;
+        employee.work="shaurmen";
+
+        System.out.println(employee.resume("Shaven", 69, "shaurmen"));
+        employee.complain(true);
+        employee.earn(12,6);
+        employee.toWork();
+
+        customer.name="Gurgen";
+        customer.age=90;
+        customer.work="customer";
+
+        customer.complain(false);
+        customer.earn(2,8);
+        customer.setupMeeting();
+        customer.toWork();
     }
 }
