@@ -1,11 +1,6 @@
 abstract class Person {
-    String name;
+    String fullName;
     int age;
-    String work;
-    abstract void toWork();
-    public void setupMeeting() {
-        System.out.println("Hello");
-    }
-  //  abstract void manageTime();
- //   abstract void argue();
+    String job;
+    abstract String printInfo();
 }

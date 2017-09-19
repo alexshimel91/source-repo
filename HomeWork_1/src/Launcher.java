@@ -1,28 +1,15 @@
 public class Launcher {
 
-    public static String init = "Alex Shymel";
+    public static String INIT = "Alex Shymel";
 
     public static void main(String[] args) {
-        System.out.println(init);
-        Employee employee = new Employee();
-        Customer customer = new Customer();
+        System.out.println(INIT);
+        Person person = new Employee("Gurgen", 49,"shaurmen");
+        Person person1 = new Customer("Shaven", 70, "master-shaurmen");
+        Arithmetic arif = new Arithmetic();
 
-        employee.name="Shaven";
-        employee.age=66;
-        employee.work="shaurmen";
-
-        System.out.println(employee.resume("Shaven", 69, "shaurmen"));
-        employee.complain(true);
-        employee.earn(12,6);
-        employee.toWork();
-
-        customer.name="Gurgen";
-        customer.age=90;
-        customer.work="customer";
-
-        customer.complain(false);
-        customer.earn(2,8);
-        customer.setupMeeting();
-        customer.toWork();
+        System.out.println(person.printInfo());
+        System.out.println(person1.printInfo());
+        arif.arithmetic(3,12);
     }
 }

@@ -1,24 +1,20 @@
-public class Customer extends Person implements Working {
+public class Customer extends Person {
 
-    @Override
-    public String complain(boolean compl) {
-        if (!compl) {
-            System.out.println("do it!");
-        }else{
-            System.out.println("don't do it!"); }
-        return null;
-    }
-    public void toWork(){
-        System.out.println("work!");
-    }
-    @Override
-    public void earn(int a, int b) {
-        double c = Math.pow(a,b);
-        System.out.println(c);
+    private String fullName;
+    private int age;
+    private String job;
+
+    Customer(String fullName, int age, String job){
+        this.fullName=fullName;
+        this.age=age;
+        this.job=job;
     }
 
-    @Override
-    public void setupMeeting() {
-        super.setupMeeting();
+    public String printInfo(){
+        String info = fullName + " " + age + " " + job;
+        return info;
     }
+
+
+
 }

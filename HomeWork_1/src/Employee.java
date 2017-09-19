@@ -1,37 +1,18 @@
-public class Employee extends Person implements Working {
+public class Employee extends Person  {
 
-/*    private String name;
+    private String fullName;
     private int age;
-    private String work;*/
+    private String job;
 
-    public String resume (String name, int age, String work){
-        return name+" "+age+" "+" "+work;
+    Employee(String fullName, int age, String job){
+        this.fullName=fullName;
+        this.age=age;
+        this.job=job;
     }
 
-    public void toWork() {
-        System.out.println("Hardly working or working hard?");
+    public String printInfo () {
+        String info = fullName + " " + age + " " + job;
+        return info;
     }
 
-    @Override
-    public String complain(boolean compl) {
-        String complPhrase;
-        if (compl) {
-            System.out.println("one complain");
-            complPhrase = "I need more money, boss";
-        }
-        else {
-            System.out.println("no complains");
-            complPhrase = "I'm happy, boss";
-        }
-        System.out.println(complPhrase);
-        return complPhrase;
-    }
-
-    @Override
-    public void earn(int a, int b) {
-        int sum = a+b;
-        System.out.println(sum);
-        int modulo = Math.round(a/b);
-        System.out.println(modulo);
-    }
 }
